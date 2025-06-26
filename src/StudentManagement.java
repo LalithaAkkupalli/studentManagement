@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StudentManagement {
+public class StudentManagement 
+{
     ArrayList<Student> students = new ArrayList<>();
-    public void addStudent(){
+    public void addStudent()
+    {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter name of the student");
         String name = sc.nextLine();
@@ -14,12 +16,14 @@ public class StudentManagement {
         students.add(new Student(name,age,roll_no));
 
     }
-    public void displayStudents(){
+    public void displayStudents()
+    {
         if(students.isEmpty())
         {
             System.out.println("No students added yet");
         }
-        else{
+        else
+        {
             for(Student s : students)
             {
                 System.out.println(s.getName()+" "+s.getAge()+" "+s.getRoll_no());

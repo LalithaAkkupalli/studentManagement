@@ -5,7 +5,7 @@ public class Main {
         StudentManagement sm = new StudentManagement();
         Scanner sc = new Scanner(System.in);
 
-        while(true){
+        while(true) {
             System.out.println("1. Add Student");
             System.out.println("2. Display Students");
             System.out.println("3. Exit");
@@ -19,7 +19,7 @@ public class Main {
 
             int choice = sc.nextInt();
 
-            switch (choice){
+            switch (choice) {
                 case 1:
                     sm.addStudent();
                     break;
