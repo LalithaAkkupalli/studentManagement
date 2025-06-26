@@ -26,5 +26,68 @@ public class StudentManagement {
             }
         }
     }
+    public void deletebyRollno(int roll_no){
+        for(Student s : students){
+            if(s.getRoll_no()==roll_no){
+                students.remove(s);
+                break;
+            }
+        }
+    }
+    public void deletebyName(String name)
+    {
+        for(Student s : students)
+        {
+            if(s.getName().equals(name))
+            {
+                students.remove(s);
+                break;
+            }
+        }
+    }
+    public void deletebyAge(int age)
+    {
+        for(Student s : students)
+        {
+            if(s.getAge()==age)
+            {
+                students.remove(s);
+            }
+        }
+    }
+    public void deleteAll()
+    {
+        students.clear();
+    }
+    public void displayAll()
+    {
+        for(Student s : students)
+        {
+            System.out.println(s.getName()+" "+s.getAge()+" "+s.getRoll_no());
+        }
+    }
+    public void updatebyName(String name, String newname)
+    {
+
+        for(Student s : students)
+        {
+            if(s.getName().equals(name))
+            {
+                s.setName(newname);
+                break;
+            }
+                
+        }
+    }
+    public void searchbyRollno(int roll_no)
+    {
+        for(Student s : students )
+        {
+            if(s.getRoll_no()==roll_no)
+            {
+              System.out.println("Name: "+s.getName()+" Age: "+s.getAge()+" Roll no: "+s.getRoll_no());
+            }
+        }
+    }
 
 }
